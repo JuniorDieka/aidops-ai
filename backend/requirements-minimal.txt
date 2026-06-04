@@ -1,0 +1,48 @@
+# Minimal requirements for demo mode (no heavy ML libraries)
+# Core Framework
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# Database
+sqlalchemy==2.0.25
+alembic==1.13.1
+redis==5.0.1
+
+# LangChain (minimal)
+langchain==0.1.4
+langchain-community==0.0.16
+langchain-openai==0.0.5
+langchain-anthropic==0.0.1
+openai==1.10.0
+anthropic==0.8.1
+
+# Vector DB (FAISS only - lightweight)
+faiss-cpu==1.7.4
+sentence-transformers==2.3.1
+
+# Document Processing (minimal)
+pymupdf==1.23.21
+python-multipart==0.0.6
+pandas==2.2.0
+openpyxl==3.1.2
+
+# HTTP Client
+httpx==0.26.0
+aiohttp==3.9.1
+
+# Observability & Logging
+structlog==24.1.0
+python-json-logger==2.0.7
+langsmith>=0.0.83
+
+# Security & Validation
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-dotenv==1.0.0
+
+# Utilities
+tenacity==8.2.3
+python-dateutil==2.8.2
+pytz==2023.3

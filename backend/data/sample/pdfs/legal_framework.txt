@@ -1,0 +1,154 @@
+HUMANITARIAN OPERATIONS LEGAL FRAMEWORK
+International Standards and Compliance Guidelines
+
+INTRODUCTION
+This document provides an overview of the legal and regulatory framework governing humanitarian operations, including international humanitarian law, human rights standards, and operational guidelines.
+
+INTERNATIONAL HUMANITARIAN LAW (IHL)
+
+Geneva Conventions and Additional Protocols:
+The four Geneva Conventions (1949) and their Additional Protocols establish the legal framework for the protection of civilians, wounded combatants, and prisoners of war during armed conflict.
+
+Key Principles:
+1. Distinction: Parties must distinguish between civilians and combatants
+2. Proportionality: Attacks must not cause excessive civilian harm
+3. Precaution: All feasible precautions must be taken to avoid civilian casualties
+4. Humanity: Persons not taking part in hostilities must be treated humanely
+
+SPHERE HUMANITARIAN STANDARDS
+
+The Sphere Handbook (2018 edition) sets minimum standards for humanitarian response across key sectors:
+
+WASH Minimum Standards:
+- Water supply: Minimum 15 liters per person per day
+- Water quality: Free from contamination, acceptable taste, color, and odor
+- Sanitation: Maximum 20 people per toilet
+- Hygiene: Access to soap and hygiene items
+
+Shelter and Settlement Standards:
+- Covered living space: Minimum 3.5 square meters per person
+- Household items: Cooking utensils, blankets, sleeping mats
+- Thermal comfort: Protection from elements
+
+Food Security and Nutrition Standards:
+- General food distribution: 2,100 kcal per person per day
+- Acute malnutrition treatment: Timely identification and treatment
+- Micronutrient supplementation: Vitamin A, iron, iodine
+
+Health Standards:
+- Essential health services: Available and accessible to all
+- Maternal and newborn health: Skilled birth attendance
+- Communicable disease control: Vaccination, surveillance, outbreak response
+
+UN SUSTAINABLE DEVELOPMENT GOALS (SDGs)
+
+Relevant SDGs for Humanitarian Action:
+- SDG 1: No Poverty
+- SDG 2: Zero Hunger
+- SDG 3: Good Health and Well-being
+- SDG 6: Clean Water and Sanitation
+- SDG 10: Reduced Inequalities
+- SDG 16: Peace, Justice and Strong Institutions
+
+SAFEGUARDING AND PROTECTION
+
+Protection from Sexual Exploitation and Abuse (PSEA):
+All humanitarian workers must:
+- Adhere to zero-tolerance policy on sexual exploitation and abuse
+- Report any concerns through safe reporting mechanisms
+- Complete mandatory PSEA training
+- Maintain professional boundaries with beneficiaries
+
+Child Protection:
+- Best interests of the child must be primary consideration
+- Prohibition of child labor and recruitment
+- Family reunification for unaccompanied minors
+- Access to education and psychosocial support
+
+Gender-Based Violence (GBV) Prevention:
+- Safe and accessible services for GBV survivors
+- Women's participation in program design and implementation
+- Gender-sensitive needs assessments
+- Confidential and survivor-centered response
+
+DATA PROTECTION AND PRIVACY
+
+Personal Data Handling:
+- Obtain informed consent before collecting personal data
+- Store data securely with restricted access
+- Use data only for stated humanitarian purposes
+- Delete data when no longer needed
+- Protect beneficiary identity in case studies and reports
+
+FINANCIAL COMPLIANCE
+
+Anti-Money Laundering (AML):
+- Know Your Customer (KYC) procedures for all transactions
+- Suspicious transaction reporting
+- Record-keeping for minimum 7 years
+- Regular staff training on AML procedures
+
+Counter-Terrorism Financing (CTF):
+- Screening of partners and beneficiaries against sanctions lists
+- Due diligence on financial transactions
+- Prohibition of support to designated terrorist organizations
+- Compliance with UN Security Council resolutions
+
+ENVIRONMENTAL STANDARDS
+
+Humanitarian operations must:
+- Minimize environmental impact
+- Avoid harm to natural resources
+- Promote sustainable practices
+- Consider climate change adaptation
+- Engage communities in environmental protection
+
+ACCOUNTABILITY TO AFFECTED POPULATIONS (AAP)
+
+Core Commitments:
+1. Information sharing: Provide accessible information about programs
+2. Participation: Involve affected populations in decision-making
+3. Feedback mechanisms: Establish safe and accessible complaint channels
+4. Response: Act on feedback and close the feedback loop
+
+MONITORING AND EVALUATION
+
+Minimum Requirements:
+- Baseline data collection within first month
+- Regular monitoring of outputs and outcomes
+- Mid-term review for projects exceeding 12 months
+- End-line evaluation measuring impact
+- Lessons learned documentation
+
+REPORTING OBLIGATIONS
+
+Incident Reporting:
+Organizations must report:
+- Security incidents affecting staff or operations
+- Fraud, corruption, or misuse of funds
+- Violations of safeguarding policies
+- Serious program implementation challenges
+
+LEGAL COMPLIANCE CHECKLIST
+
+Before commencing operations, ensure:
+☐ Registration with local authorities
+☐ Memorandum of Understanding with government
+☐ Staff work permits and visas
+☐ Insurance coverage (liability, medical, security)
+☐ Tax compliance and exemption certificates
+☐ Import permits for humanitarian goods
+☐ Banking arrangements and currency regulations
+
+REFERENCES
+- Geneva Conventions (1949) and Additional Protocols
+- Sphere Handbook (2018)
+- UN Sustainable Development Goals
+- IASC Guidelines on Mental Health and Psychosocial Support
+- Core Humanitarian Standard (CHS)
+- Good Humanitarian Donorship Principles
+
+For legal advice on specific situations, consult qualified legal counsel familiar with humanitarian law and local regulations.
+
+Last Updated: January 2026
+Version: 3.0

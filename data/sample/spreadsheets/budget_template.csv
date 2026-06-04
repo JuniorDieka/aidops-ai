@@ -1,0 +1,42 @@
+Category,Item,Unit,Quantity,Unit Cost (USD),Total Cost (USD),Notes
+Personnel,Project Manager,Month,12,4500,54000,Full-time position
+Personnel,Field Coordinator,Month,12,3500,42000,Full-time position
+Personnel,WASH Officer,Month,12,3000,36000,Full-time position
+Personnel,Health Officer,Month,12,3000,36000,Full-time position
+Personnel,M&E Officer,Month,6,2800,16800,Part-time position
+Personnel,Finance Officer,Month,12,2500,30000,Full-time position
+Personnel,Community Mobilizers,Month,36,800,28800,3 positions x 12 months
+WASH,Water Tank (10000L),Unit,15,2500,37500,For temporary camps
+WASH,Water Purification Tablets,Box,500,25,12500,1000 tablets per box
+WASH,Hygiene Kits,Kit,3500,15,52500,One per family
+WASH,Latrine Construction,Unit,175,450,78750,1 per 20 people
+WASH,Handwashing Stations,Unit,100,80,8000,Tippy taps
+Health,Mobile Clinic Equipment,Set,2,15000,30000,Complete medical kits
+Health,Essential Medicines,Month,12,8000,96000,WHO essential medicines list
+Health,Vaccination Campaign,Campaign,1,25000,25000,Children under 5
+Health,Nutrition Screening,Person,15000,3,45000,MUAC screening
+Health,Treatment for SAM,Case,450,120,54000,Severe acute malnutrition
+Food Security,Food Rations,Person/Month,180000,35,6300000,15000 people x 12 months
+Food Security,Cooking Utensils,Kit,3500,25,87500,One per family
+Food Security,Seeds and Tools,Kit,2000,45,90000,For agricultural recovery
+Shelter,Emergency Shelter Kits,Kit,2450,180,441000,70% of families
+Shelter,Plastic Sheeting,Roll,1050,65,68250,Supplementary materials
+Shelter,Blankets,Unit,7000,12,84000,2 per person
+Shelter,Sleeping Mats,Unit,7000,8,56000,2 per person
+Protection,Psychosocial Support,Session,240,350,84000,Group sessions
+Protection,GBV Response Services,Month,12,4500,54000,Survivor support
+Protection,Child Protection,Month,12,3500,42000,Unaccompanied minors
+Operations,Vehicle Rental,Month,12,2500,30000,4WD for field access
+Operations,Fuel and Maintenance,Month,12,1800,21600,Vehicle operations
+Operations,Office Rent,Month,12,1200,14400,Field office
+Operations,Communications,Month,12,800,9600,Phones and internet
+Operations,Utilities,Month,12,400,4800,Electricity and water
+M&E,Baseline Survey,Survey,1,15000,15000,Initial assessment
+M&E,Mid-term Evaluation,Evaluation,1,12000,12000,6-month review
+M&E,End-line Survey,Survey,1,18000,18000,Final assessment
+M&E,Data Collection Tools,Set,1,5000,5000,Tablets and software
+Visibility,Signage and Branding,Set,1,3500,3500,Donor visibility
+Visibility,Documentation,Month,12,800,9600,Photos and stories
+Subtotal,,,,,8233200,
+Overhead (7%),,,,,576524,Administrative costs
+Total Budget,,,,,8809724,18-month project

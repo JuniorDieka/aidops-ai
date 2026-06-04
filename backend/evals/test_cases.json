@@ -1,0 +1,37 @@
+[
+  {
+    "id": "tc001",
+    "query": "What are the Sphere minimum standards for water supply?",
+    "expected_answer_contains": ["15 liters", "per person", "per day"],
+    "expected_sources": ["legal_framework.txt", "field_report_example.txt"],
+    "category": "factual_retrieval"
+  },
+  {
+    "id": "tc002",
+    "query": "What is the budget for WASH activities?",
+    "expected_answer_contains": ["180,000", "WASH"],
+    "expected_sources": ["field_report_example.txt", "budget_template.csv"],
+    "category": "numerical_extraction"
+  },
+  {
+    "id": "tc003",
+    "query": "What are the eligibility criteria for GHF grants?",
+    "expected_answer_contains": ["2 years", "non-profit", "experience"],
+    "expected_sources": ["grant_guidelines.txt"],
+    "category": "policy_understanding"
+  },
+  {
+    "id": "tc004",
+    "query": "How many people are displaced in the Northern Region?",
+    "expected_answer_contains": ["15,000", "3,500 families"],
+    "expected_sources": ["field_report_example.txt"],
+    "category": "situation_analysis"
+  },
+  {
+    "id": "tc005",
+    "query": "What are the reporting requirements for GHF grants?",
+    "expected_answer_contains": ["quarterly", "financial", "narrative"],
+    "expected_sources": ["grant_guidelines.txt"],
+    "category": "compliance_requirements"
+  }
+]
