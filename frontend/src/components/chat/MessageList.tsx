@@ -70,7 +70,7 @@ export default function MessageList({
               <div className="mt-3 pt-3 border-t border-border/50 space-y-2">
                 <p className="text-xs font-semibold text-muted-foreground">Sources:</p>
                 <div className="flex flex-wrap gap-2">
-                  {message.citations.map((citation, idx) => (
+                  {Array.from(new Map(message.citations.map(c => [c.source_file, c])).values()).map((citation, idx) => (
                     <CitationChip key={idx} citation={citation} index={idx + 1} />
                   ))}
                 </div>
@@ -107,7 +107,7 @@ export default function MessageList({
                   <div className="mt-3 pt-3 border-t border-border/50 space-y-2">
                     <p className="text-xs font-semibold text-muted-foreground">Sources:</p>
                     <div className="flex flex-wrap gap-2">
-                      {streamCitations.map((citation, idx) => (
+                      {Array.from(new Map(streamCitations.map(c => [c.source_file, c])).values()).map((citation, idx) => (
                         <CitationChip key={idx} citation={citation} index={idx + 1} />
                       ))}
                     </div>
