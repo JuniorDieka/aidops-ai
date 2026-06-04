@@ -449,7 +449,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For questions or issues:
 - Open an issue on GitHub
-- Email: support@aidops-ai.example.com
+- Email: jnrdieka@gmail.com
 
 ---
 
