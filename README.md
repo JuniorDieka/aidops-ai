@@ -2,7 +2,7 @@
 
 **AI-Native Automation Platform for Humanitarian Operations**
 
-An autonomous agent platform that ingests messy, unstructured humanitarian data (PDFs, audio, spreadsheets), indexes it into a vector database, and executes automated workflows from natural-language prompts — returning streamed, source-cited answers.
+An autonomous agent platform that ingests messy, unstructured humanitarian data (PDFs, audio, spreadsheets), indexes it into a vector database, and executes automated workflows from natural-language prompts returning streamed, source-cited answers.
 
 [![CI](https://github.com/JuniorDieka/aidops-ai/workflows/CI/badge.svg)](https://github.com/JuniorDieka/aidops-ai/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
