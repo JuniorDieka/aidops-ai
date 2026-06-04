@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { WebSocketClient } from '@/lib/websocket'
 import { Message, Citation, StreamChunk } from '@/types'
+import { uploadFile } from '@/lib/api'
 import MessageList from './MessageList'
 import MessageInput from './MessageInput'
 
@@ -73,6 +74,40 @@ export default function ChatInterface({ sessionId }: ChatInterfaceProps) {
     wsClientRef.current?.sendMessage(content)
   }
 
+  const handleFileUpload = async (file: File) => {
+    try {
+      // Add system message about upload
+      const uploadMessage: Message = {
+        id: `msg-${Date.now()}`,
+        role: 'assistant',
+        content: `📎 Uploading ${file.name}...`,
+        timestamp: new Date().toISOString(),
+      }
+      setMessages((prev) => [...prev, uploadMessage])
+
+      // Upload file
+      const result = await uploadFile(file)
+      
+      // Add success message
+      const successMessage: Message = {
+        id: `msg-${Date.now()}`,
+        role: 'assistant',
+        content: `✅ Successfully uploaded and processed ${file.name}. Created ${result.chunks_created} chunks. You can now ask questions about this document!`,
+        timestamp: new Date().toISOString(),
+      }
+      setMessages((prev) => [...prev.slice(0, -1), successMessage])
+    } catch (error) {
+      // Add error message
+      const errorMessage: Message = {
+        id: `msg-${Date.now()}`,
+        role: 'assistant',
+        content: `❌ Failed to upload ${file.name}: ${error instanceof Error ? error.message : 'Unknown error'}`,
+        timestamp: new Date().toISOString(),
+      }
+      setMessages((prev) => [...prev.slice(0, -1), errorMessage])
+    }
+  }
+
   return (
     <div className="flex flex-col h-full">
       <MessageList
@@ -81,7 +116,11 @@ export default function ChatInterface({ sessionId }: ChatInterfaceProps) {
         streamContent={currentStreamContent}
         streamCitations={currentCitations}
       />
-      <MessageInput onSend={handleSendMessage} disabled={isStreaming} />
+      <MessageInput 
+        onSend={handleSendMessage} 
+        onFileUpload={handleFileUpload}
+        disabled={isStreaming} 
+      />
     </div>
   )
 }
