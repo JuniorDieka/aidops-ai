@@ -17,6 +17,8 @@ export default function ChatInterface({ sessionId }: ChatInterfaceProps) {
   const [currentStreamContent, setCurrentStreamContent] = useState('')
   const [currentCitations, setCurrentCitations] = useState<Citation[]>([])
   const wsClientRef = useRef<WebSocketClient | null>(null)
+  const streamContentRef = useRef('')
+  const streamCitationsRef = useRef<Citation[]>([])
 
   useEffect(() => {
     const handleMessage = (chunk: StreamChunk) => {
@@ -24,28 +26,36 @@ export default function ChatInterface({ sessionId }: ChatInterfaceProps) {
         setIsStreaming(true)
         setCurrentStreamContent('')
         setCurrentCitations([])
+        streamContentRef.current = ''
+        streamCitationsRef.current = []
       } else if (chunk.type === 'citation' && chunk.citation) {
-        setCurrentCitations((prev) => [...prev, chunk.citation!])
+        streamCitationsRef.current = [...streamCitationsRef.current, chunk.citation]
+        setCurrentCitations(streamCitationsRef.current)
       } else if (chunk.type === 'stream_start') {
+        streamContentRef.current = ''
         setCurrentStreamContent('')
       } else if (chunk.type === 'token' && chunk.content) {
-        setCurrentStreamContent((prev) => prev + chunk.content)
+        streamContentRef.current += chunk.content
+        setCurrentStreamContent(streamContentRef.current)
       } else if (chunk.type === 'stream_end') {
         const assistantMessage: Message = {
           id: `msg-${Date.now()}`,
           role: 'assistant',
-          content: currentStreamContent,
-          citations: currentCitations,
+          content: streamContentRef.current,
+          citations: streamCitationsRef.current,
           timestamp: new Date().toISOString(),
         }
         setMessages((prev) => [...prev, assistantMessage])
         setIsStreaming(false)
         setCurrentStreamContent('')
         setCurrentCitations([])
+        streamContentRef.current = ''
+        streamCitationsRef.current = []
       } else if (chunk.type === 'error') {
         console.error('Stream error:', chunk.content)
         setIsStreaming(false)
         setCurrentStreamContent('')
+        streamContentRef.current = ''
       }
     }
 
