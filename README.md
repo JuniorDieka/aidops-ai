@@ -14,6 +14,30 @@ An autonomous agent platform that ingests messy, unstructured humanitarian data 
 
 ---
 
+## 📸 Screenshots
+
+**For non-technical users, policymakers, and program managers** - see how the application looks without installation:
+
+<div align="center">
+
+### Chat Interface
+![Chat Interface](docs/screenshots/01-chat-interface.png)
+*Ask questions about your humanitarian operations data in natural language*
+
+### Upload Documents
+![Upload Documents](docs/screenshots/02-upload-documents.png)
+*Easily upload PDFs, audio files, spreadsheets, and other data sources*
+
+### Agent Workflows
+![Agent Workflows](docs/screenshots/03-agent-workflows.png)
+*Execute autonomous workflows for compliance checks, reports, grant matching, and crisis monitoring*
+
+</div>
+
+> 📁 **More screenshots available in [`docs/screenshots/`](docs/screenshots/)** with detailed descriptions for each feature.
+
+---
+
 ## 🎯 Value Proposition
 
 AidOps AI demonstrates production-grade agentic AI system design for humanitarian operations:
