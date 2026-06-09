@@ -40,7 +40,14 @@ export async function executeWorkflow(request: WorkflowRequest): Promise<Workflo
   })
 
   if (!response.ok) {
-    throw new Error(`Workflow execution failed: ${response.statusText}`)
+    // Try to get the actual error message from the response body
+    try {
+      const errorData = await response.json()
+      const errorMessage = errorData.detail || response.statusText
+      throw new Error(errorMessage)
+    } catch (parseError) {
+      throw new Error(`Workflow execution failed: ${response.statusText}`)
+    }
   }
 
   return response.json()
