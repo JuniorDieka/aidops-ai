@@ -3,28 +3,34 @@
 import { useState } from 'react'
 import { uploadFile, ingestSampleData } from '@/lib/api'
 import { IngestionJob } from '@/types'
-import { Upload, FileText, Music, Table, CheckCircle, XCircle, Loader2, Database } from 'lucide-react'
+import { Upload, FileText, Music, Table, CheckCircle, XCircle, Loader2, Database, AlertCircle } from 'lucide-react'
 import IngestionStatus from './IngestionStatus'
 
 export default function FileUpload() {
   const [jobs, setJobs] = useState<IngestionJob[]>([])
   const [uploading, setUploading] = useState(false)
   const [ingesting, setIngesting] = useState(false)
+  const [successMessage, setSuccessMessage] = useState<string | null>(null)
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files
     if (!files || files.length === 0) return
 
     setUploading(true)
+    setErrorMessage(null)
+    setSuccessMessage(null)
 
     try {
       for (const file of Array.from(files)) {
         const job = await uploadFile(file)
         setJobs((prev) => [job, ...prev])
       }
+      setSuccessMessage(`Successfully uploaded ${files.length} file${files.length > 1 ? 's' : ''}`)
     } catch (error) {
       console.error('Upload failed:', error)
-      alert(`Upload failed: ${error}`)
+      const errorMsg = error instanceof Error ? error.message : String(error)
+      setErrorMessage(`Upload failed: ${errorMsg}`)
     } finally {
       setUploading(false)
       e.target.value = ''
@@ -33,14 +39,17 @@ export default function FileUpload() {
 
   const handleIngestSampleData = async () => {
     setIngesting(true)
+    setErrorMessage(null)
+    setSuccessMessage(null)
 
     try {
       const result = await ingestSampleData()
       setJobs((prev) => [...result.jobs, ...prev])
-      alert(result.message)
+      setSuccessMessage(result.message)
     } catch (error) {
       console.error('Sample data ingestion failed:', error)
-      alert(`Sample data ingestion failed: ${error}`)
+      const errorMsg = error instanceof Error ? error.message : String(error)
+      setErrorMessage(`Sample data ingestion failed: ${errorMsg}`)
     } finally {
       setIngesting(false)
     }
@@ -81,6 +90,52 @@ export default function FileUpload() {
             Upload PDFs, audio files, or spreadsheets to add them to your knowledge base
           </p>
         </div>
+
+        {/* Success Message */}
+        {successMessage && (
+          <div className="bg-green-50 dark:bg-green-950/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
+            <div className="flex items-start gap-3">
+              <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-500 flex-shrink-0 mt-0.5" />
+              <div className="flex-1">
+                <h4 className="text-sm font-semibold text-green-900 dark:text-green-200 mb-1">
+                  Success!
+                </h4>
+                <p className="text-sm text-green-800 dark:text-green-300">
+                  {successMessage}
+                </p>
+              </div>
+              <button
+                onClick={() => setSuccessMessage(null)}
+                className="text-green-600 dark:text-green-500 hover:text-green-800 dark:hover:text-green-300"
+              >
+                <XCircle className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Error Message */}
+        {errorMessage && (
+          <div className="bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
+            <div className="flex items-start gap-3">
+              <AlertCircle className="w-5 h-5 text-red-600 dark:text-red-500 flex-shrink-0 mt-0.5" />
+              <div className="flex-1">
+                <h4 className="text-sm font-semibold text-red-900 dark:text-red-200 mb-1">
+                  Error
+                </h4>
+                <p className="text-sm text-red-800 dark:text-red-300">
+                  {errorMessage}
+                </p>
+              </div>
+              <button
+                onClick={() => setErrorMessage(null)}
+                className="text-red-600 dark:text-red-500 hover:text-red-800 dark:hover:text-red-300"
+              >
+                <XCircle className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <label className="flex flex-col items-center justify-center border-2 border-dashed border-border rounded-lg p-8 cursor-pointer hover:border-primary hover:bg-accent/50 transition-colors">
